@@ -11,24 +11,24 @@ function useValues(event){
 const inp = document.getElementById("input")
 inp.addEventListener('submit', useValues);
 
-
 function doTheloop(bish,bosh,loop){
     loop =  loop;
     result.innerHTML = "";
     let s = [];
     for (let i = 1; i<=loop; i++){
-        
+        s[i] = "<h1> "
         if(i % bosh == 0 && i % bish == 0){  
-            s[i] = "<h1> " + " Bish-Bosh " + " </h1>";
+            s[i] += " Bish-Bosh ";
         }
         else if(i % bish == 0){
-            s[i] = "<h1> " + " Bish " + " </h1>";
+            s[i] += " Bish ";
         }
         else if(i % bosh == 0){
-            s[i] = "<h1> " + " Bosh " + " </h1>";
+            s[i] += " Bosh ";
         }else{
-            s[i] = "<h1> " + i + " </h1>";
+            s[i] += i;
         } 
+        s[i] += " </h1>";
     }
     result.innerHTML = s;
 }
