@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER
+        ================================================== -->
+    <div class="jumbotron text-center" id="header">
+        <h1>Bish-Bosh 2.0</h1>
+    </div>
+
+    <!-- INPUT
+        ================================================== -->
+    <div class="container">
+        <h2>Bish-Bosh 2.0</h2>
+        <p>Input number values to make your own Bish-Bosh</p>
+        <form id="input">
+            <div class="form-group">
+                <label for="bishInp">Första divisionstal (det som ska ersättas med Bish) Minst 1:</label>
+                <input type="number" min="1" value=3 class="form-control" id="bishInp" required>
+                <span class="validity"></span>
+            </div>
+            <div class="form-group">
+                <label for="boshInp">Andra divisionstal (det som ska ersättas med Bosh) Minst 2:</label>
+                <input type="number" min="2" value=4 class="form-control" id="boshInp" required>
+                <span class="validity"></span>
+            </div>
+            <div class="form-group">
+                <label for="loopInp">Loop tal (alltså vart loopen ska sluta) Minst 20:</label>
+                <input type="number" min="20" value=20 class="form-control" id="loopInp" required>
+                <span class="validity"></span>
+            </div>
+            <div class="container">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Result
+    ================================================== -->
+    <div id="result"></div>
+
+    <!-- explaining field....
+    ================================================== -->
+
+    <div class="jumbotron text-center">
+        <h3>This is the purpuse with Bish-Bosh</h3>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>Bish-Bosh 1.0</h3>
+                <p>Bish-Bosh listar alla tal mellan 1 och 100, men vissa undantag: Om talet är jämnt delbart
+                    med 3 listas ‘Bish’ istället för talet. Om talet är jämnt delbart med 4 listas ‘Bosh’ istället för
+                    talet. Om talet är jämnt delbart med både med 3 och 4 skrivs “Bish-Bosh” istället för talet.
+                    Exempel:
+                    1, 2, Bish, Bosh, 5, Bish, 7, Bosh, Bish, 10, 11, Bish-Bosh, 13, 14, Bish [...]
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <h3>Bish-Bosh 2.0</h3>
+                <p>Nu skall ni skriva om Bish-Bosh med ett visuellt gränssnitt och presentation på en
+                    HTML-sida. Ni skall även låta en användare sätta indata, alltså:
+                    Vilken siffra som är Bish (tidigare 3), vilken siffra som är Bosh (tidigare 4) och hur långt
+                    loopen skall gå (tidigare 100) inga negativa värden tillåts.
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- FOOTER
+    ================================================== -->
+    <footer class="jumbotron text-center" class="section section_footer">
+        <div class="container">
+
+
+            <class class="row">
+                <div class="col-sm-4">
+                    <!-- About Us -->
+                    <h5 class="section_footer__heading">
+                        About Us
+                    </h5>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti dolorum, sint corporis
+                        nostrum, possimus
+                        unde eos vitae eius quasi saepe.
+                    </p>
+                </div>
+
+                <div class="col-sm-4">
+                    <!-- Contact info -->
+                    <ul class="section_footer__info">
+                        <h5 class="section_footer__heading">
+                            Contact info
+                        </h5>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>12345 Nacka, Stockholm, Sweden
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i> +46 8 123 456 78
+                        </li>
+                        <li>
+                            <i class="far fa-envelope"></i> <a>♥ Webmaster ♥</a>
+                        </li>
+                        <li>
+                            <i class="far fa-envelope"></i> <a
+                                href="mailto:kj.ortigoza@gmail.com">kj.ortigoza@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-4">
+                    <!-- Opening hours -->
+                    <ul class="section_footer__open">
+                        <h5 class="section_footer__heading">
+                            Opening hours
+                        </h5>
+                        <li>
+                            <i class="section_footer__open__days">Monday - Friday</i>
+                        </li>
+                        <li>
+                            <i class="section_footer__open__time">9:00 AM - 17:00 PM</i>
+                        </li>
+                        <li>
+                            <i class="section_footer__open__days">Saturday - Sunday</i>
+                        </li>
+                        <li>
+                            <i class="section_footer__open__time">Closed</i>
+                        </li>
+                    </ul>
+                </div>
+
+            </class> <!-- / .row -->
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Copyright -->
+                    <div class="section_footer__copyright">
+                        © <span id="js-current-year">2021.02.22</span> ©Bish-Bosh factory. All rights reserved.
+                    </div>
+                </div>
+            </div><!-- / .row -->
+
+        </div><!-- / .container -->
+    </footer>
+    <!-- SCRIPT
+	================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="module" src=bishbosh.js></script>
+</body>
+
+</html>
